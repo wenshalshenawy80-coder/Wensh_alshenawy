@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشناوي لخدمات نقل وإنقاذ السيارات</title>
+    <style>
+        :root {
+            --bg-main: #0b0f19;
+            --bg-card: #131c31;
+            --accent: #f59e0b;
+            --text-main: #ffffff;
+            --text-muted: #94a3b8;
+            --border: #1e293b;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        body { background-color: var(--bg-main); color: var(--text-main); line-height: 1.7; padding-bottom: 90px; }
+        header { background: rgba(19, 28, 49, 0.95); backdrop-filter: blur(10px); padding: 12px 15px; border-bottom: 2px solid var(--accent); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+        .logo-box h1 { font-size: 17px; color: var(--accent); font-weight: 800; }
+        .logo-box p { font-size: 11px; color: var(--text-muted); }
+        .header-phones { text-align: left; direction: ltr; font-size: 12px; font-weight: bold; color: var(--accent); background: rgba(245,158,11,0.1); padding: 4px 8px; border-radius: 6px; border: 1px solid rgba(245,158,11,0.2); }
+        .hero { text-align: center; padding: 35px 20px; background: linear-gradient(135deg, rgba(11,15,25,0.95), rgba(19,28,49,0.9)), url('https://images.unsplash.com/photo-1508974239320-0a029497e820?w=800') center/cover; border-bottom: 1px solid var(--border); }
+        .hero h2 { font-size: 23px; color: var(--accent); margin-bottom: 12px; font-weight: 800; }
+        .hero p { font-size: 14px; color: var(--text-muted); margin-bottom: 22px; max-width: 500px; margin-left: auto; margin-right: auto; }
+        .cta-btn { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #22c55e, #16a34a); color: white; padding: 14px 30px; border-radius: 30px; font-size: 16px; font-weight: bold; text-decoration: none; box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4); }
+        .section-title { text-align: center; font-size: 18px; margin: 30px 0 15px; color: var(--accent); font-weight: 700; position: relative; }
+        .section-title::after { content: ''; display: block; width: 50px; height: 3px; background: var(--accent); margin: 6px auto 0; border-radius: 2px; }
+        .features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 0 15px; max-width: 600px; margin: 0 auto; }
+        .feature-card { background: var(--bg-card); padding: 15px; border-radius: 12px; text-align: center; border: 1px solid var(--border); }
+        .feature-card .icon { font-size: 22px; margin-bottom: 5px; }
+        .feature-card h4 { font-size: 13px; color: var(--text-main); margin-bottom: 3px; }
+        .feature-card p { font-size: 11px; color: var(--text-muted); }
+        .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 0 15px; max-width: 600px; margin: 0 auto; }
+        .service-card { background: var(--bg-card); padding: 15px; border-radius: 12px; text-align: center; font-size: 13px; border: 1px solid var(--border); font-weight: bold; color: var(--accent); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; }
+        .areas-grid { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; padding: 0 15px; max-width: 600px; margin: 0 auto; }
+        .area-tag { background: var(--bg-card); padding: 8px 14px; border-radius: 20px; font-size: 12px; border: 1px solid var(--border); color: var(--text-main); font-weight: 500; }
+        .gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 15px; max-width: 600px; margin: 0 auto; }
+        .gallery-item { background: var(--bg-card); border-radius: 12px; overflow: hidden; border: 1px solid var(--border); text-align: center; }
+        .gallery-item img { width: 100%; height: 120px; object-fit: cover; }
+        .gallery-item p { padding: 10px; font-size: 12px; color: var(--text-muted); font-weight: 600; }
+        .bottom-bar { position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(19, 28, 49, 0.98); backdrop-filter: blur(10px); display: flex; justify-content: space-around; padding: 10px 8px; border-top: 2px solid var(--accent); z-index: 1000; box-shadow: 0 -4px 20px rgba(0,0,0,0.6); }
+        .bottom-bar a { flex: 1; text-align: center; padding: 8px 4px; font-size: 11px; font-weight: bold; color: white; text-decoration: none; border-radius: 8px; margin: 0 3px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; }
+        .btn-call1 { background: #059669; }
+        .btn-wa { background: #16a34a; }
+        .btn-call2 { background: #d97706; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-box">
+            <h1>الشناوي لإنقاذ السيارات</h1>
+            <p>خدمة سريعة وآمنة 24/7</p>
+        </div>
+        <div class="header-phones">01210902480<br>01017990950</div>
+    </header>
+    <section class="hero">
+        <h2>أسرع ونش إنقاذ في مصر</h2>
+        <p>جاهزون لمساعدتك وسحب سيارتك في أي مكان وخلال دقائق معدودة على مدار اليوم.</p>
+        <a href="tel:01210902480" class="cta-btn">📞 اطلب الونش الأساسي فوراً</a>
+    </section>
+    <h3 class="section-title">لماذا تختار الشناوي؟</h3>
+    <div class="features-grid">
+        <div class="feature-card"><div class="icon">⚡</div><h4>سرعة الاستجابة</h4><p>وصول سريع لمكان العطل</p></div>
+        <div class="feature-card"><div class="icon">🛡️</div><h4>أمان تام</h4><p>نقل آمن بدون أي خدوش</p></div>
+        <div class="feature-card"><div class="icon">🕒</div><h4>متاح 24 ساعة</h4><p>خدمة طوال أيام الأسبوع</p></div>
+        <div class="feature-card"><div class="icon">💰</div><h4>أسعار مناسبة</h4><p>أفضل الأسعار وأعلى جودة</p></div>
+    </div>
+    <h3 class="section-title">خدمات الإنقاذ (Services)</h3>
+    <div class="services-grid">
+        <div class="service-card"><span>🚛</span> ونش هيدروليك متطور</div>
+        <div class="service-card"><span>🚨</span> إنقاذ الحوادث والأعطال</div>
+        <div class="service-card"><span>🛣️</span> نقل بين المحافظات</div>
+        <div class="service-card"><span>🔋</span> شحن وتغيير البطاريات</div>
+    </div>
+    <h3 class="section-title">مناطق التغطية والخدمة</h3>
+    <div class="areas-grid">
+        <div class="area-tag">المرج</div><div class="area-tag">العبور</div><div class="area-tag">جسر السويس</div><div class="area-tag">مدينة نصر</div><div class="area-tag">السلام</div><div class="area-tag">الرحاب</div><div class="area-tag">مدينتي</div><div class="area-tag">بدر</div><div class="area-tag">العاصمة الإدارية</div><div class="area-tag">الشروق</div>
+    </div>
+    <h3 class="section-title">معرض العمليات الميدانية</h3>
+    <div class="gallery-grid" style="margin-bottom: 20px;">
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=300" alt="سحب سيارة"><p>سحب سيارات رياضية</p></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1563720223185-11003d516935?w=300" alt="نقل سيارة فارهة"><p>نقل سيارات فارهة</p></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=300" alt="إنقاذ سريع"><p>إنقاذ في الطرق السريعة</p></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=300" alt="سيارات دفع رباعي"><p>نقل سيارات الدفع الرباعي</p></div>
+    </div>
+    <div class="bottom-bar">
+        <a href="tel:01210902480" class="btn-call1"><span>📞 اتصال 1</span><span style="font-size: 9px; opacity: 0.9;">01210902480</span></a>
+        <a href="https://wa.me/201210902480" class="btn-wa"><span>💬 واتساب</span><span style="font-size: 9px; opacity: 0.9;">مراسلة فورية</span></a>
+        <a href="tel:01017990950" class="btn-call2"><span>📞 اتصال 2</span><span style="font-size: 9px; opacity: 0.9;">01017990950</span></a>
+    </div>
+</body>
+</html>
